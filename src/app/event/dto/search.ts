@@ -1,15 +1,11 @@
 import { ApiProperty } from "@nestjs/swagger";
-import {
-  IsEthereumAddress,
-  IsInt,
-  IsOptional,
-  IsString,
-} from "class-validator";
+import { IsEthereumAddress, IsString } from "class-validator";
 import { Transform } from "class-transformer";
 
 import { IEventSearchDto } from "../interfaces";
+import { PaginationDto } from "./pagination";
 
-export class EventSearchDto implements IEventSearchDto {
+export class EventSearchDto extends PaginationDto implements IEventSearchDto {
   @ApiProperty({
     type: String,
   })
@@ -17,18 +13,4 @@ export class EventSearchDto implements IEventSearchDto {
   @IsEthereumAddress({ message: "patternMismatch" })
   @Transform(({ value }: { value: string }) => value.toLowerCase())
   public address: string;
-
-  @ApiProperty({
-    minimum: 1,
-  })
-  @IsOptional()
-  @IsInt({ message: "typeMismatch" })
-  public fromBlock: number;
-
-  @ApiProperty({
-    minimum: 1,
-  })
-  @IsOptional()
-  @IsInt({ message: "typeMismatch" })
-  public toBlock: number;
 }

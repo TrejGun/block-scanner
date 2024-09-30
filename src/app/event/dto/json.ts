@@ -1,7 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger";
 import { IsInt } from "class-validator";
 
-import { IEventJsonDto } from "../interfaces/json";
+import { IEventJsonDto } from "../interfaces";
 
 export class EventJsonDto implements IEventJsonDto {
   @ApiProperty()

@@ -1,15 +1,8 @@
-import { Module, Logger } from "@nestjs/common";
-import { ConfigModule } from "@nestjs/config";
+import { Module } from "@nestjs/common";
 
-import { EventModule } from "../event/event.module";
-import { ethersRpcProvider } from "../ethers/providers/rpc";
-import { ScannerService } from "./scanner.service";
-import { ScannerController } from "./scanner.controller";
+import { Erc20Module } from "./erc20/erc20.module";
 
 @Module({
-  imports: [ConfigModule, EventModule],
-  providers: [ethersRpcProvider, Logger, ScannerService],
-  controllers: [ScannerController],
-  exports: [ScannerService],
+  imports: [Erc20Module],
 })
 export class ScannerModule {}

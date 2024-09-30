@@ -6,7 +6,9 @@ import { useContainer } from "class-validator";
 
 import { AppModule } from "./app/app.module";
 import { companyName } from "./common/constants";
-import "./app/ethers/ethers.patch";
+import { patchBigInt } from "./utils/patch-bigint";
+
+patchBigInt();
 
 async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
