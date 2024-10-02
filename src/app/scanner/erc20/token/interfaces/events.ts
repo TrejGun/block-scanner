@@ -7,7 +7,3 @@ export enum Erc20EventTypes {
   Approval = "Approval",
   Transfer = "Transfer",
 }
-
-export enum ContractType {
-  ERC20_TOKEN = "ERC20_TOKEN",
-}
