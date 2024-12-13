@@ -8,7 +8,7 @@
     "url": "https://github.com/trejgun/block-scanner"
   },
   "dependencies": {
-    "@ethberry/nestjs-ethers": "8.0.4",
+    "@ethberry/nestjs-ethers": "8.0.5",
     "@ethersproject/abstract-provider": "5.7.0",
     "@nestjs/common": "10.4.13",
     "@nestjs/config": "3.3.0",
