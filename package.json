@@ -11,7 +11,7 @@
     "@ethberry/nestjs-ethers": "8.0.5",
     "@ethersproject/abstract-provider": "5.8.0",
     "@nestjs/common": "11.0.11",
-    "@nestjs/config": "4.0.0",
+    "@nestjs/config": "4.0.1",
     "@nestjs/core": "11.0.11",
     "@nestjs/microservices": "11.0.11",
     "@nestjs/platform-express": "11.0.11",
